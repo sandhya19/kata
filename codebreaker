@@ -1,0 +1,25 @@
+di = {'a': '!', 'b': ')', 'c': '"', 'd': '(', 'e': '£', 'f': '*', 'g': '%', 'h': '&', 'i': '>', 
+      'j': '<', 'k': '@', 'l': 'a', 'm': 'b', 'n': 'c', 'o': 'd', 'p': 'e', 'q': 'f', 'r': 'g', 
+      's': 'h', 't': 'i', 'u': 'j', 'v': 'k', 'w': 'l', 'x': 'm', 'y': 'n', 'z': 'o'}
+      
+def encrypt(mesg):
+    print("Encrpted message is:")
+    for i in mesg:
+        print(di.get(i),end='')
+
+def decrypt(mesg):
+    print("Decrpted message is:")
+    for key,val in di.items():
+        for i in mesg:
+            if i == val:
+               print(key,end='')
+   
+        
+print("Enter the message for encrypt")
+mesg=str(input())
+enc=encrypt(mesg)
+
+print("Enter the message for decrypt")
+mesg=str(input())
+enc=decrypt(mesg)
+
